@@ -1,0 +1,26 @@
+# services:
+#   postgres:
+#     image: postgres
+#     environment:
+#       - POSTGRES_PASSWORD=postgrespw
+#     ports:
+#       - 5432:5432
+#     volumes: pgdata:/var/lib/postgresql/data
+# volumes:
+#   pgdata:
+# version: '3.8'
+services:
+  postgres:
+    image: postgres
+    # restart: always
+    environment:
+      - POSTGRES_PASSWORD=postgrespw
+      # POSTGRES_USER: postgres
+      # POSTGRES_PASSWORD: postgrespw
+      # POSTGRES_DB: auctions
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes:
+  postgres_data:
