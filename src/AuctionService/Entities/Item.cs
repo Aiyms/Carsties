@@ -1,5 +1,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
-namespace AuctionService.Entities;
+using AuctionService.Entities;
+
+namespace AuctionService;
 
 [Table("Items")]
 public class Item
@@ -12,7 +14,7 @@ public class Item
     public int Mileage { get; set; }
     public string ImageUrl { get; set; }
 
-    //nav properties
-    public Auction Auction{ get; set; }
+    // nav properties
+    public Auction Auction { get; set; }
     public Guid AuctionId { get; set; }
 }
